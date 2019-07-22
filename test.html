@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Call the plotly.js script-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+<h1>Page Heading</h1>
+<p>Check out <a href="https://plot.ly/javascript/range-slider/">this page</a> for information regarding sliders</p>
+
+<!--Create a div container for the plot-->
+<div id="tester" style="width:600px;height:250px;"></div>
+
+
+<!--Run JavaScript after HTML has loaded - Otherwise, Plotly.plot()
+    will not know what id="tester" is-->
+<script>
+    TESTER = document.getElementById('tester');
+
+    Plotly.plot( TESTER, [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16] }], { 
+    margin: { t: 0 } }, {showSendToCloud:true} );
+
+</script>
+
+<!--Check out this page for information regarding sliders:
+https://plot.ly/javascript/range-slider/-->
+</body>
+</html>
